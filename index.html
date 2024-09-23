@@ -77,8 +77,22 @@
                       <input type="number" name="donationAmount" placeholder="Write Donation Amount" id="donationAmount1" class="w-full bg-white rounded-lg py-4 px-2 text-xl border-2 outline-none focus:border-transparent">
 
                       <!-- Button -->
-                      <button id="donateNowBtn1" class="w-full font-semibold text-xl text-primary rounded-xl px-7 py-4 hover:bg-primary hover:text-white">Donate Now</button>
-
+                      <!-- Open the modal using ID.showModal() method -->
+                    <button id="donateNowBtn1" class=" w-full font-semibold text-xl text-primary rounded-xl px-7 py-4 hover:bg-primary hover:text-white" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-bold">Congrates!</h3>
+                    <img class="mt-4" src="./assets/coin.png" alt="">
+                    <p class="py-4">You have donated for humankind</p>
+                    <h4 class="text-xl font-semibold">Successfully</h4>
+                    <div class="modal-action">
+                    <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close confirmation</button>
+                    </form>
+                    </div>
+                    </div>
+                    </dialog>
                   </div>
             </div> 
             <!-- card 2 -->
@@ -102,9 +116,23 @@
                       <input type="number" name="donationAmount" placeholder="Write Donation Amount" id="donationAmount1" class="w-full bg-white rounded-lg py-4 px-2 text-xl border-2 outline-none focus:border-transparent">
 
                       <!-- Button -->
-                      <button id="donateNowBtn2" class="w-full font-semibold text-xl text-primary rounded-xl px-7 py-4 hover:bg-primary hover:text-white">Donate Now</button>
-
-                  </div>
+                      <!-- Open the modal using ID.showModal() method -->
+                    <button id="donateNowBtn2" class=" w-full font-semibold text-xl text-primary rounded-xl px-7 py-4 hover:bg-primary hover:text-white" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-bold">Congrates!</h3>
+                    <img class="mt-4" src="./assets/coin.png" alt="">
+                    <p class="py-4">You have donated for humankind</p>
+                     <h4 class="text-xl font-semibold">Successfully</h4>
+                    <div class="modal-action">
+                    <form method="dialog">
+                     <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close confirmation</button>
+                    </form>
+                    </div>
+                    </div>
+                    </dialog>
+                </div>
             </div> 
             <!-- card 3 -->
             <div class="flex gap-7 flex-col md:flex-row">
@@ -125,11 +153,24 @@
                       <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                       <!-- input -->
                       <input type="number" name="donationAmount" placeholder="Write Donation Amount" id="donationAmount3" class="w-full bg-white rounded-lg py-4 px-2 text-xl border-2 outline-none focus:border-transparent">
-
-                      <!-- Button -->
-                      <button id="donateNowBtn3" class="w-full font-semibold text-xl text-primary rounded-xl px-7 py-4 hover:bg-primary hover:text-white">Donate Now</button>
-
-                  </div>
+                    <!-- Button -->
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button id="donateNowBtn3" class="w-full font-semibold text-xl text-primary rounded-xl px-7 py-4 hover:bg-primary hover:text-white" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <dialog id="my_modal_1" class="modal">
+  <div class="modal-box flex flex-col justify-center items-center">
+    <h3 class="text-2xl font-bold">Congrates!</h3>
+    <img class="mt-4" src="./assets/coin.png" alt="">
+    <p class="py-4">You have donated for humankind</p>
+    <h4 class="text-xl font-semibold">Successfully</h4>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close confirmation</button>
+      </form>
+    </div>
+  </div>
+                    </dialog>
+                </div>
             </div> 
         </div>  
     </section>
