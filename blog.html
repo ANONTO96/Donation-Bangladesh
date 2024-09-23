@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- custom tailwind -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        .font-lexend{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body class="font-lexend">
+    <!-- header section -->
+    <header>
+        <nav class="w-[90%] md:w-[85%] lg:w-[80%] mx-auto flex justify-between items-center mt-3">
+            <!-- blog -->
+            <a href="/blog.html" class="font-semibold text-xl text-gray-300 px-8 py-3 rounded-lg bg-primary hover:bg-blue-500">Blog</a>
+            <!-- text -->
+            <div class="hidden sm:flex items-center justify-center sm:gap-1 md:gap-3">
+                <img src="./assets/logo.png" alt="">
+                <a href="./index.html" class="font-semibold text-2xl">Donate Bangladesh</a>
+            </div>
+            <!-- balance -->
+            <h1 class="flex gap-2 justify-center items-center font-medium text-xl">
+                <img src="./assets/coin.png" alt="">
+                <span id="mainBalance">100000</span>
+                BDT
+            </h1>
+        </nav>
+      </header>
+      <!-- main section -->
+    <main>
+        <section class="w-[85%] md:w-[80%] lg:w-[75%] mx-auto mt-28">
+            <!-- title -->
+           <div class="flex gap-3">
+            <h1 class="text-4xl font-bold mb-8">Important FAQ </h1>
+            <img class="h-10" src="./assets/question-solid.svg" alt="">
+           </div>
+           <!-- accordion -->
+            <div class="space-y-8">
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <div class="divider w-[90%] mx-auto mt-28"></div>
+    </main>
+</body>
+</html>
