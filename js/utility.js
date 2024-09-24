@@ -1,3 +1,5 @@
+// global variable to use
+let count = 0;
 // history section show
 const historyBtn = document.getElementById('historyBtn');
 historyBtn.addEventListener('click',function(event){
@@ -9,8 +11,8 @@ historyBtn.addEventListener('click',function(event){
     donationSection.classList.add('hidden');
     historySection.classList.remove('hidden');
  
-    historyBtn.classList.add('bg-primary',  'text-gray-300', 'hover:bg-blue-500', 'hover:text-white');
-    donationBtn.classList.remove('bg-primary',  'text-gray-300', 'hover:bg-blue-500', 'hover:text-white');
+    historyBtn.classList.add('bg-sky-500',  'text-gray-200', 'hover:bg-blue-500', 'hover:text-white');
+    donationBtn.classList.remove('bg-sky-500',  'text-gray-200', 'hover:bg-blue-500', 'hover:text-white');
 });
 
 // btn section show
@@ -24,8 +26,8 @@ donationBtn.addEventListener('click',function(event){
     donationSection.classList.remove('hidden');
     historySection.classList.add('hidden');
     
-    historyBtn.classList.remove('bg-primary',  'text-gray-300', 'hover:bg-blue-500', 'hover:text-white');
-    donationBtn.classList.add('bg-primary',  'text-gray-300', 'hover:bg-blue-500', 'hover:text-white');
+    historyBtn.classList.remove('bg-sky-500',  'text-gray-200', 'hover:bg-blue-500', 'hover:text-white');
+    donationBtn.classList.add('bg-sky-500',  'text-gray-200', 'hover:bg-blue-500', 'hover:text-white');
 });
 
 // calculating and inserting values for card 1 
@@ -47,13 +49,26 @@ donateNowBtn1.addEventListener('click',function(event){
     alreadyDonate1 = alreadyDonate1Value + donationAmount1Value;
     // validating and updating values
     if(donationAmount1Value <= mainBalanceValue && donationAmount1Value !== "" && donationAmount1Value >= 0){
-        mainBalanceElement.innerText = mainBalance;
+        mainBalanceElement.innerText = mainBalance.toFixed(2);
     
-        alreadyDonate1Element.innerText = alreadyDonate1;
+        alreadyDonate1Element.innerText = alreadyDonate1.toFixed(2);
     }
     else{
-        alert('Invalid Amount Or Insufficient Balance')
+        alert('Invalid Amount Or Insufficient Balance');
+        return;
     }
+    // adding to history
+    count += 1;
+    const historyItem = document.createElement('div');
+    historyItem.className = 'bg-white p-3 rounded-lg shadow-lg border-l-2 border-purple-400';
+    historyItem.innerHTML = `
+    <p class="text-lg text-gray-500">Donation No: ${count}</p>
+    <p class="text-lg text-gray-500">${alreadyDonate1.toFixed(2)}৳ is Donated For Flood Relief In Noakhali,Bangladesh</p>
+    <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+    `;
+
+    const historyContainer = document.getElementById('historySection');
+    historyContainer.insertBefore(historyItem,historyContainer.firstChild);
 });
 
 // calculating and inserting values for card 2 
@@ -75,13 +90,26 @@ donateNowBtn2.addEventListener('click',function(event){
     alreadyDonate2 = alreadyDonate2Value + donationAmount2Value;
     // validating and updating values
     if(donationAmount2Value <= mainBalanceValue && donationAmount2Value !== "" && donationAmount2Value >= 0){
-        mainBalanceElement.innerText = mainBalance;
+        mainBalanceElement.innerText = mainBalance.toFixed(2);
     
-        alreadyDonate2Element.innerText = alreadyDonate2;
+        alreadyDonate2Element.innerText = alreadyDonate2.toFixed(2);
     }
     else{
-        alert('Invalid Amount Or Insufficient Balance')
+        alert('Invalid Amount Or Insufficient Balance');
+        return;
     }
+    // adding to history
+    count += 1;
+    const historyItem = document.createElement('div');
+    historyItem.className = 'bg-white p-3 rounded-lg shadow-lg border-l-2 border-purple-400';
+    historyItem.innerHTML = `
+    <p class="text-lg text-gray-500">Donation No: ${count}</p>
+    <p class="text-lg text-gray-500">${alreadyDonate2.toFixed(2)}৳ is Donated for Flood Relief in Feni,Bangladesh</p>
+    <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+    `;
+    const historyContainer = document.getElementById('historySection');
+    historyContainer.insertBefore(historyItem,historyContainer.firstChild);
+    
 });
 
 // calculating and inserting values for card 3 
@@ -103,11 +131,25 @@ donateNowBtn3.addEventListener('click',function(event){
     alreadyDonate3 = alreadyDonate3Value + donationAmount3Value;
     // validating and updating values
     if(donationAmount3Value <= mainBalanceValue && donationAmount3Value !== "" && donationAmount3Value >= 0){
-        mainBalanceElement.innerText = mainBalance;
+        mainBalanceElement.innerText = mainBalance.toFixed(2);
     
-        alreadyDonate3Element.innerText = alreadyDonate3;
+        alreadyDonate3Element.innerText = alreadyDonate3.toFixed(2);
     }
     else{
-        alert('Invalid Amount Or Insufficient Balance')
+        alert('Invalid Amount Or Insufficient Balance');
+        return;
     }
+    // adding to history
+    count += 1;
+    const historyItem = document.createElement('div');
+    historyItem.className = 'bg-white p-3 rounded-lg shadow-lg border-l-2 border-purple-400';
+    historyItem.innerHTML = `
+    <p class="text-lg text-gray-500">Donation No: ${count}</p>
+    <p class="text-lg text-gray-500">${alreadyDonate3.toFixed(2)}৳ is Donated for Aid for Injured in the Quota Movement in Bangladesh</p>
+    <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+    `;
+
+    const historyContainer = document.getElementById('historySection');
+    historyContainer.insertBefore(historyItem,historyContainer.firstChild);
 });
+
