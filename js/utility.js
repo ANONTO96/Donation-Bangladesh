@@ -50,12 +50,15 @@ donateNowBtn1.addEventListener('click',function(event){
     // changing values
     let mainBalance = mainBalanceValue - donationAmount1Value;
     let alreadyDonate1 = alreadyDonate1Value + donationAmount1Value;
+    
     // validating and updating values
     if(donationAmount1Value <= mainBalanceValue && donationAmount1Value !== "" && donationAmount1Value >= 0){
         mainBalanceElement.innerText = mainBalance.toFixed(2);
     
         alreadyDonate1Element.innerText = alreadyDonate1.toFixed(2);
         dialog1.showModal();
+
+        donationAmount1Element.value = "";
     }
     else{
         alert('Invalid Amount Or Insufficient Balance');
@@ -96,6 +99,7 @@ donateNowBtn2.addEventListener('click',function(event){
     // changing values
     let mainBalance = mainBalanceValue - donationAmount2Value;
     let alreadyDonate2 = alreadyDonate2Value + donationAmount2Value;
+
     // validating and updating values
     if(donationAmount2Value <= mainBalanceValue && donationAmount2Value !== "" && donationAmount2Value >= 0){
         mainBalanceElement.innerText = mainBalance.toFixed(2);
@@ -103,6 +107,8 @@ donateNowBtn2.addEventListener('click',function(event){
         alreadyDonate2Element.innerText = alreadyDonate2.toFixed(2);
 
         dialog2.showModal();
+
+        donationAmount2Element.value = "";
     }
     else{
         alert('Invalid Amount Or Insufficient Balance');
@@ -142,6 +148,7 @@ donateNowBtn2.addEventListener('click',function(event){
     // changing values
     let mainBalance = mainBalanceValue - donationAmount3Value;
     let alreadyDonate3 = alreadyDonate3Value + donationAmount3Value;
+
     // validating and updating values
     if(donationAmount3Value <= mainBalanceValue && donationAmount3Value !== "" && donationAmount3Value >= 0){
         mainBalanceElement.innerText = mainBalance.toFixed(2);
@@ -149,7 +156,8 @@ donateNowBtn2.addEventListener('click',function(event){
         alreadyDonate3Element.innerText = alreadyDonate3.toFixed(2);
 
         dialog3.showModal();
-        
+
+        donationAmount3Element.value = "";
     }
     else{
         alert('Invalid Amount Or Insufficient Balance');
