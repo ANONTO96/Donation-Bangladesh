@@ -32,6 +32,9 @@ donationBtn.addEventListener('click',function(event){
 
 // calculating and inserting values for card 1 
 const donateNowBtn1 = document.getElementById('donateNowBtn1');
+// dialog
+const dialog1 = document.getElementById('my_modal_1');
+
 donateNowBtn1.addEventListener('click',function(event){
 
     //getting values in float
@@ -45,17 +48,19 @@ donateNowBtn1.addEventListener('click',function(event){
     const alreadyDonate1Element = document.getElementById('alreadyDonate1')
 
     // changing values
-    mainBalance = mainBalanceValue - donationAmount1Value;
-    alreadyDonate1 = alreadyDonate1Value + donationAmount1Value;
+    let mainBalance = mainBalanceValue - donationAmount1Value;
+    let alreadyDonate1 = alreadyDonate1Value + donationAmount1Value;
     // validating and updating values
     if(donationAmount1Value <= mainBalanceValue && donationAmount1Value !== "" && donationAmount1Value >= 0){
         mainBalanceElement.innerText = mainBalance.toFixed(2);
     
         alreadyDonate1Element.innerText = alreadyDonate1.toFixed(2);
+        dialog1.showModal();
     }
     else{
         alert('Invalid Amount Or Insufficient Balance');
         return;
+        
     }
     // adding to history
     count += 1;
@@ -73,6 +78,9 @@ donateNowBtn1.addEventListener('click',function(event){
 
 // calculating and inserting values for card 2 
 const donateNowBtn2 = document.getElementById('donateNowBtn2');
+// dialog
+const dialog2 = document.getElementById('my_modal_2');
+
 donateNowBtn2.addEventListener('click',function(event){
 
     //getting values in float
@@ -86,13 +94,15 @@ donateNowBtn2.addEventListener('click',function(event){
     const alreadyDonate2Element = document.getElementById('alreadyDonate2')
 
     // changing values
-    mainBalance = mainBalanceValue - donationAmount2Value;
-    alreadyDonate2 = alreadyDonate2Value + donationAmount2Value;
+    let mainBalance = mainBalanceValue - donationAmount2Value;
+    let alreadyDonate2 = alreadyDonate2Value + donationAmount2Value;
     // validating and updating values
     if(donationAmount2Value <= mainBalanceValue && donationAmount2Value !== "" && donationAmount2Value >= 0){
         mainBalanceElement.innerText = mainBalance.toFixed(2);
     
         alreadyDonate2Element.innerText = alreadyDonate2.toFixed(2);
+
+        dialog2.showModal();
     }
     else{
         alert('Invalid Amount Or Insufficient Balance');
@@ -112,9 +122,12 @@ donateNowBtn2.addEventListener('click',function(event){
     
 });
 
-// calculating and inserting values for card 3 
-const donateNowBtn3 = document.getElementById('donateNowBtn3');
-donateNowBtn3.addEventListener('click',function(event){
+    // calculating and inserting values for card 3 
+    const donateNowBtn3 = document.getElementById('donateNowBtn3');
+    // dialog
+    const dialog3 = document.getElementById('my_modal_3');
+    
+    donateNowBtn3.addEventListener('click',function(event){
 
     //getting values in float
     const donationAmount3Value = parseFloat(document.getElementById('donationAmount3').value);
@@ -127,13 +140,16 @@ donateNowBtn3.addEventListener('click',function(event){
     const alreadyDonate3Element = document.getElementById('alreadyDonate3')
 
     // changing values
-    mainBalance = mainBalanceValue - donationAmount3Value;
-    alreadyDonate3 = alreadyDonate3Value + donationAmount3Value;
+    let mainBalance = mainBalanceValue - donationAmount3Value;
+    let alreadyDonate3 = alreadyDonate3Value + donationAmount3Value;
     // validating and updating values
     if(donationAmount3Value <= mainBalanceValue && donationAmount3Value !== "" && donationAmount3Value >= 0){
         mainBalanceElement.innerText = mainBalance.toFixed(2);
     
         alreadyDonate3Element.innerText = alreadyDonate3.toFixed(2);
+
+        dialog3.showModal();
+        
     }
     else{
         alert('Invalid Amount Or Insufficient Balance');
