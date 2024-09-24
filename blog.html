@@ -36,22 +36,30 @@
 </head>
 <body class="font-lexendFont">
     <!-- header section -->
-    <header>
-        <nav class="w-[90%] md:w-[85%] lg:w-[80%] mx-auto flex justify-between items-center mt-6">
-            <!-- blog -->
-            <a href="/blog.html" class="font-semibold text-xl text-gray-200 px-8 py-3 rounded-lg bg-sky-500 hover:bg-blue-500">Blog</a>
-            <!-- text -->
-            <div class="hidden sm:flex items-center justify-center sm:gap-1 md:gap-3">
-                <img src="./assets/logo.png" alt="">
-                <a href="./index.html" class="font-semibold text-2xl">Donate Bangladesh</a>
-            </div>
-            <!-- balance -->
-            <h1 class="flex gap-2 justify-center items-center font-medium text-xl">
-                <img src="./assets/coin.png" alt="">
-                <span id="mainBalance">10000</span>
-                BDT
-            </h1>
-        </nav>
+    <header class="py-6">
+        <!-- nav on small device -->
+    <div class="flex items-center justify-center gap-2 mb-5 sm:hidden">
+
+      <img src="./assets/logo.png" alt="">
+      <a href="./index.html" class="font-semibold text-2xl">Donate Bangladesh</a>
+
+    </div>
+    <!-- nav after sm device -->
+    <nav class="w-[90%] md:w-[85%] lg:w-[80%] mx-auto flex justify-between items-center">
+        <!-- blog -->
+        <a href="./blog.html" class="font-semibold text-xl text-gray-200 px-8 py-3 rounded-lg bg-sky-500 hover:bg-blue-500 hover:text-white">Blog</a>
+        <!-- text -->
+        <div class="hidden sm:flex items-center justify-center sm:gap-1 md:gap-3">
+            <img src="./assets/logo.png" alt="">
+            <a href="./index.html" class="font-semibold text-2xl">Donate Bangladesh</a>
+        </div>
+        <!-- balance -->
+        <h1 class="flex gap-2 justify-center items-center font-medium text-xl">
+            <img src="./assets/coin.png" alt="">
+            <span id="mainBalance">10000</span>
+            BDT
+        </h1>
+    </nav>
       </header>
       <!-- main section -->
     <main>
